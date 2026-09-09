@@ -1,0 +1,3 @@
+SUM(IF [Lesividad Clasificada] = "FALLECIDOS" OR [Lesividad Clasificada] = "HERIDOS GRAVES" THEN 1 ELSE 0 END)
+/
+SUM(1) // Esto es el total de implicados para esa fila (tipo_vehiculo)

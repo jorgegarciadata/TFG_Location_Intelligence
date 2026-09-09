@@ -1,0 +1,8 @@
+IF [tipo_persona] = "Conductor" THEN
+    IF [positiva_alcohol] = "S" AND [positiva_droga] = 1 THEN "Alcohol y Drogas"
+    ELSEIF [positiva_alcohol] = "S" THEN "Solo Alcohol"
+    ELSEIF [positiva_droga] = 1 THEN "Solo Drogas"
+    ELSE "Negativo/No Consta"
+    END
+ELSE NULL
+END

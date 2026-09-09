@@ -1,0 +1,7 @@
+CASE [c_LOD_MaximaLesividad_Orden.txt]
+    WHEN 4 THEN "FALLECIDOS (accidente)"
+    WHEN 3 THEN "HERIDOS GRAVES (accidente)"
+    WHEN 2 THEN "HERIDOS LEVES (accidente)"
+    WHEN 1 THEN "SOLO ILESOS (accidente)"
+    ELSE "DESCONOCIDA / OTROS (accidente)"
+END

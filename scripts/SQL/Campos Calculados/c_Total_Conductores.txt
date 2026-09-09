@@ -1,0 +1,1 @@
+SUM(IF [tipo_persona] = "Conductor" THEN 1 ELSE 0 END)

@@ -1,0 +1,1 @@
+SUM(IF [lesividad_clasificada] = "FALLECIDOS" THEN 1 ELSE 0 END)

@@ -1,0 +1,9 @@
+{FIXED [Num Expediente] : MAX(
+    CASE [Lesividad Clasificada]
+        WHEN "FALLECIDOS" THEN 4
+        WHEN "HERIDOS GRAVES" THEN 3
+        WHEN "HERIDOS LEVES" THEN 2
+        WHEN "SIN ASISTENCIA / ILESOS" THEN 1
+        ELSE 0
+    END
+)}

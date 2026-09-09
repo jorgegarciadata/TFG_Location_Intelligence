@@ -1,0 +1,5 @@
+SUM(
+    IF [c_LOD_Conductor_Positivo] = 1 AND [Lesividad Clasificada] = "FALLECIDOS" THEN 1
+    ELSE 0
+    END
+)

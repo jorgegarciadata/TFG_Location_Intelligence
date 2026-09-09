@@ -1,0 +1,3 @@
+COUNTD(IF [c_Accident_MaximaLesividadTexto] = "FALLECIDOS (accidente)" OR [c_Accident_MaximaLesividadTexto] = "HERIDOS GRAVES (accidente)" THEN [Num Expediente] END)
+/
+COUNTD(IF NOT ISNULL([c_Accident_MaximaLesividadTexto]) AND [c_Accident_MaximaLesividadTexto] <> "DESCONOCIDA / OTROS (accidente)" THEN [Num Expediente] END)

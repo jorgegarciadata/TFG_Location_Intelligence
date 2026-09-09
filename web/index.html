@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <title>Análisis de Siniestralidad Vial en Madrid | Por Jorge García de Lorenzo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Librerías para Zoom/Pan y Divisor -->
+    <script src="https://unpkg.com/@panzoom/panzoom@4.5.1/dist/panzoom.min.js"></script>
+    <script src="https://unpkg.com/split.js/dist/split.min.js"></script>
+    
+    <!-- Librería para renderizar LaTeX (MathJax) -->
+    <script>
+        MathJax = {
+          tex: {
+            inlineMath: [['$', '$'], ['\\(', '\\)']],
+            displayMath: [['$$', '$$'], ['\\[', '\\]']]
+          },
+          svg: {
+            fontCache: 'global'
+          }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+
+</head>
+<body>
+    <!-- ===== PÁGINA DE INICIO ===== -->
+    <div id="landing-page">
+        <div id="landing-bg"></div><div class="landing-content"><h1>Análisis de Datos Geoespaciales:<br>Aplicación a la Siniestralidad Vial en Madrid</h1><p>Un análisis geoespacial interactivo del riesgo y la vulnerabilidad en el municipio de Madrid.</p><button id="start-btn">Comenzar Análisis →</button></div><footer id="landing-footer"><span class="byline">Proyecto realizado por<br><strong>Jorge García de Lorenzo</strong></span><div class="logo-group"><img src="images/logo-r.png" alt="R Logo"><img src="images/logo-tableau.png" alt="Tableau Logo"><img src="images/logo-carto.png" alt="CARTO Logo"></div></footer>
+    </div>
+
+    <div id="app-container" class="hidden">
+        <div id="main-content" class="split">
+            <div id="split-0">
+                <div id="viz-panel">
+                    <div id="tableau-container">
+                        <div class='tableauPlaceholder' id='viz1752527593960' style='position: relative; width: 100%; height: 100%;'><noscript><a href='#'><img alt='VISUALIZACIÓN EN TABLEAU ' src='https://public.tableau.com/static/images/Ta/Tableau_TFG/VISUALIZACINENTABLEAU/1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='Tableau_TFG/VISUALIZACINENTABLEAU?:embed=y&:toolbar=no&:showVizHome=no' /><param name='tabs' value='yes' /><param name='static_image' value='https://public.tableau.com/static/images/Ta/Tableau_TFG/VISUALIZACINENTABLEAU/1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1752527593960');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height='100%';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+                    </div>
+                    <div id="carto-map-container">
+                         <iframe id="carto-map-iframe" allowfullscreen></iframe>
+                    </div>
+                    <div id="workflow-image-container">
+                        <img id="workflow-image" src="" alt="Visualización de Workflow">
+                    </div>
+                    <!-- ===== PANEL PARA CONTENIDO TEÓRICO ===== -->
+                    <div id="theory-panel"></div>
+
+                    <!-- ===== NUEVO: PANEL DE AGRADECIMIENTO FINAL ===== -->
+                    <div id="thank-you-container">
+                        <div id="thank-you-bg"></div>
+                        <div class="landing-content">
+                            <h1>Muchas gracias por la atención</h1>
+                        </div>
+                        <footer id="thank-you-footer">
+                             <span class="byline">Proyecto realizado por<br><strong>Jorge García de Lorenzo</strong></span>
+                             <div class="logo-group">
+                                 <img src="images/logo-r.png" alt="R Logo">
+                                 <img src="images/logo-tableau.png" alt="Tableau Logo">
+                                 <img src="images/logo-carto.png" alt="CARTO Logo">
+                             </div>
+                        </footer>
+                    </div>
+                </div>
+            </div>
+            <div id="split-1">
+                <main id="story-panel">
+                    <!-- El menú jerárquico se generará aquí con JavaScript -->
+                    <div id="chapters-wrapper"></div>
+                </main>
+            </div>
+        </div>
+        <footer id="navigation-controls">
+            <button id="prev-btn">
+                <svg class="icon-home" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+                <span class="btn-text">Anterior</span>
+            </button>
+            <span id="step-indicator"></span>
+            <button id="next-btn">Siguiente</button>
+        </footer>
+    </div>
+    
+    <script src="main.js"></script>
+</body>
+</html>

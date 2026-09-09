@@ -1,0 +1,5 @@
+SUM(
+  IF [Tipo Persona] = "Conductor"
+     AND ([Positiva Alcohol] = "S" OR [Positiva Droga] = 1)
+  THEN 1 ELSE 0 END
+)

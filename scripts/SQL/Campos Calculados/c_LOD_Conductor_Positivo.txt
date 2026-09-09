@@ -1,0 +1,7 @@
+{FIXED [num_expediente] : MAX(
+    IF [tipo_persona] = "Conductor" 
+        AND ([positiva_alcohol] = "S" OR [positiva_droga] = 1) 
+    THEN 1
+    ELSE 0
+    END
+)}

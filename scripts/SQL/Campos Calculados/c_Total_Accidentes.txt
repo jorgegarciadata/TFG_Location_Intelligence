@@ -1,0 +1,1 @@
+COUNTD([num_expediente])

@@ -7,6 +7,7 @@ Este repositorio contiene el código, las consultas espaciales y el visor web de
 El proyecto aplica técnicas de **Location Intelligence**, Estadística Espacial (LISA, H3) y algoritmos de clustering (DBSCAN) para analizar los patrones de accidentalidad en la ciudad de Madrid, detectando "puntos negros" e identificando la paradoja entre el riesgo vial y la cobertura hospitalaria.
 
 **Autor:** Jorge García de Lorenzo
+
 **Herramientas Principales:** R, SQL, CARTO, Tableau.
 
 ---
@@ -15,12 +16,14 @@ El proyecto aplica técnicas de **Location Intelligence**, Estadística Espacial
 
 El proyecto está organizado de la siguiente manera:
 
+* **`data/`**: Contiene los conjuntos de datos utilizados y generados a lo largo del proyecto.
+  * `processed/`: Datos limpios, transformados y listos para el análisis (por ejemplo, los GeoJSON generados).
+  * `raw/`: Datos brutos originales sin procesar, tal y como se obtuvieron de las fuentes.
 * **`scripts/`**: Código fuente del análisis.
   * `R/`: Scripts de preprocesamiento, limpieza y estandarización geográfica (generación de GeoJSON).
   * `SQL/`: Consultas espaciales (CARTO Workflows) para análisis de Voronoi, Isócronas, y estadística espacial (Getis-Ord Gi*, Moran's I).
 * **`web/`**: Recursos frontend (HTML, JS, CSS) para la presentación de resultados y mapas interactivos.
-* **`Analisis_de_Datos_Geoespaciales...pdf`**: Memoria completa del Trabajo de Fin de Grado con toda la fundamentación matemática y teórica.
-
+* **`Analisis_de_Datos_Geoespaciales.pdf`**: Memoria completa del Trabajo de Fin de Grado con toda la fundamentación matemática y teórica.
 ---
 
 ##  Origen y Gestión de los Datos (Política Zero-Data)
@@ -47,7 +50,7 @@ Descarga los siguientes conjuntos de datos públicos del **Portal de Datos Abier
   * *Descarga:* https://datos.madrid.es/dataset/300049-0-radares-fijos-moviles
 
 ### 2. Pipeline de Preprocesamiento
-Una vez que tengas la carpeta `data/raw/` completa con los archivos descargados, la reconstrucción de los datos es automática.
+Una vez que tengas la carpeta `data/raw/` completa con los archivos descargados.
 
 Ejecuta el script principal de R para unificar, limpiar, georreferenciar y categorizar todas las variables:
 ```bash

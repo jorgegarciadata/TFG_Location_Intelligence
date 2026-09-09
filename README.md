@@ -26,7 +26,7 @@ El proyecto está organizado de la siguiente manera:
 * **`Analisis_de_Datos_Geoespaciales.pdf`**: Memoria completa del Trabajo de Fin de Grado con toda la fundamentación matemática y teórica.
 ---
 
-##  Origen y Gestión de los Datos (Política Zero-Data)
+##  Origen y Gestión de los Datos
 
 > **Política de Repositorio Ligero:** Este repositorio **NO contiene ningún archivo de datos (ni crudos ni procesados)**. La carpeta `data/` ha sido excluida íntegramente mediante `.gitignore` para garantizar un repositorio ágil y respetar los límites de GitHub. 
 
